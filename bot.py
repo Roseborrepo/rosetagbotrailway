@@ -24,28 +24,28 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**Salam Mənim Adım [Ədalət Tagger Bot](http://t.me/edaletsup)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.**\ \n Əmrləri görmək üçün =======> /help yazın**",
+  await event.reply("**Salam Mənim Adım [Rose](http://t.me/Gunelbots).\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.**\ \n Əmrləri görmək üçün =======> /help yazın**",
                     buttons=(
                    
-		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/edalettagbot?startgroup=a")],
+		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/rosetagbot?startgroup=a")],
                       [Button.url('Support 🛠', 'https://t.me/EdaletSup'),
-                       Button.url('Rəsmi Kanal 🎴', 'https://t.me/edaletproject')],
-		      [Button.url('Sahib 👨🏻‍💻', 'https://t.me/edalet_22'),
+                       Button.url('Rəsmi Kanal 🎴', 'https://t.me/Gunelbots')],
+		      [Button.url('Sahib 👨🏻‍💻', 'https://t.me/therealjihokimin'),
                        Button.url('Creator⚡️', 'https://t.me/edalet_22')],
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "** Ədalət ⚡️ Tagger əmr siyahısı**\n\n**/tag <səbəb> - 5-li tag edər**\n\n**/etag <səbəb> - Emoji ilə tag edər**\n\n**/tektag səbəb - userlərı Tək Tək tag edər**\n\n**/admins səbəb - adminləri tag edər**\n\n**/start - botu başladar**"
+  helptext = "** Rose ⚡️ Tagger əmr siyahısı**\n\n**/tag <səbəb> - 5-li tag edər**\n\n**/etag <səbəb> - Emoji ilə tag edər**\n\n**/tektag səbəb - userlərı Tək Tək tag edər**\n\n**/admins səbəb - adminləri tag edər**\n\n**/start - botu başladar**"
   await event.reply(helptext,
                     buttons=(
-			    
-		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/edalettagbot?startgroup=a")],
+                   
+		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/rosetagbot?startgroup=a")],
                       [Button.url('Support 🛠', 'https://t.me/EdaletSup'),
-                       Button.url('Rəsmi Kanal 🎴', 'https://t.me/edaletproject')],
-		      [Button.url('Sahib 👨🏻‍💻', 'https://t.me/edalet_22'),
-                       Button.url('Creator⚡️', 'https://t.me/edalet_22')]
+                       Button.url('Rəsmi Kanal 🎴', 'https://t.me/Gunelbots')],
+		      [Button.url('Sahib 👨🏻‍💻', 'https://t.me/therealjihokimin'),
+                       Button.url('Creator⚡️', 'https://t.me/edalet_22')],
                     ),
                     link_preview=False
                    )
@@ -55,7 +55,7 @@ async def help(event):
   helptext = "** Relam və yaxud bot düzəltdirmək üçün @edalet_22 ! **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni qrupa əlavə et ➕', 'https://t.me/edalettagbot?startgroup=a')],
+                      [Button.url('Məni qrupa əlavə et ➕', 'https://t.me/rosetagbot?startgroup=a')],
                     ),
                     link_preview=False
                    )
@@ -122,7 +122,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @edalet_22**")
+        await event.respond("Modul dayandırıldı.")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -170,7 +170,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"⚡ - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @edalet_22**")
+        await event.respond("Modul dayandırıldı.")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -235,7 +235,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"**↯ - [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Modul dayandırıldı.\n\n**Buda sizin reklamınız ola bilər @edalet_22**")
+        await event.respond("Modul dayandırıldı.")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
@@ -253,7 +253,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"⚡ - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Modul dəyandırıldı.\n\n**Burada sizin reklamınız ola bilər @edalet_22**")
+        await event.respond("Modul dəyandırıldı.")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -345,7 +345,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(edalet)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @edalet_22**")
+        await event.respond("Modul dayandırıldı.")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
