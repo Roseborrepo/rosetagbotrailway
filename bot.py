@@ -482,7 +482,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(ad)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Modul dayandırıldı.)
+        await event.respond("Modul dayandırıldı.")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -500,7 +500,6 @@ async def cancel(event):
 	
 @client.on(events.NewMessage(pattern='/online'))
 async def handler(event):
-    # Kimsə "Salam" və başqa bir şey deyəndə cavab verin
     if str(event.sender_id) not in SUDO_USERS:
         return await event.reply("__Sən mənə sahib deyilsən!__")
     await event.reply('**Bot İşləyir Narahat olmayın** \n https://t.me/EdaletSup \n\n╭━━━╮ \n╰╮╭╮┃╱╱╭╮\n╱┃┃┃┣━━╋╋━━┳╮╭┳╮╭╮\n╱┃┃┃┃┃━╋┫╭╮┃╰╯┃┃┃┃\n╭╯╰╯┃┃━┫┃╭╮┣╮╭┫╰╯┃\n╰━━━┻━━┫┣╯╰╯╰╯╰━━╯\n╱╱╱╱╱╱╭╯┃\n╱╱╱╱╱╱╰━╯',
